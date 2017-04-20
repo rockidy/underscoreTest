@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="rockidy">
+  <meta name="Keywords" content="underscore">
+  <meta name="Description" content="">
+  <title>underscore.js test</title>
+  <script type="text/javascript" src="node_modules/requirejs/require.js"></script>
+  <script type="text/javascript" src="js/config.js"></script>
+ </head>
+ <body>
+  <script type="text/javascript">
+  <!--
+    requirejs(['underscore'], function(_) {
+      console.log('★★ underscore version = ' + _.VERSION);
+
+      // _.each(list, iteratee, [context])
+      console.log('※ each function...');
+      var sum = 0;
+      _.each([1, 2, 3], function (element, idx, context) {
+        console.log('index = ' + idx + ', element = ' + element + ', context = ' + context);
+        sum += element;
+      });
+      console.log('sum = ' + sum);
+
+      _.each({one: 1, two: 2, three: 3}, function(element, idx, context) {
+        console.log('index = ' + idx + ', element = ' + element + ', context = ' + JSON.stringify(context));
+      });
+      
+      // context는 iterator function에서 this로 참조되어진다.
+      console.log('※ test context...');
+      var someOtherArray = ['one','two', 'three'];
+      _.each([1, 2, 3], function (element, idx, context) {
+        console.log('index = ' + idx + ', element = ' + element + ', context = ' + context + ', each context = ' + JSON.stringify(this) + ' ==> ' + this[idx]);
+      }, someOtherArray);
+
+      // http://stackoverflow.com/questions/4946456/what-is-context-in-eachlist-iterator-context
+      var person = {};
+      person.friends = {
+        name1: 'jhon',
+        name2: 'kim',
+        name3: 'lee',
+        name4: 'choi'
+      };
+
+      _.each(['name4', 'name2'], function(name) {
+        // this refers to the friends property of the person object
+        console.log(name + ' => ' + this[name]);
+      }, person.friends);
+    });
+    
+  
+
+  //-->
+  </script>
+ </body>
+</html><style type="text/css">
+  
+</style>
