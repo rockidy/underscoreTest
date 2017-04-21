@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="rockidy">
+  <meta name="Keywords" content="underscore">
+  <meta name="Description" content="">
+  <title>underscore.js test</title>
+  <script type="text/javascript" src="node_modules/requirejs/require.js"></script>
+  <script type="text/javascript" src="js/config.js"></script>
+ </head>
+ <body>
+  <script type="text/javascript">
+  <!--
+    requirejs(['underscore'], function(_) {
+      console.log('★★ underscore version = ' + _.VERSION);
+      
+      console.log('※ reduce function...');
+      // memo는 결과값 참조를 한다.
+      var sum = _.reduce([1, 2, 3], function(memo, num) { 
+        console.log('memo = ' + memo + ', num = ' + num);
+        return memo + num; 
+      }, 10);
+      console.log('sum = ' + sum);
+
+      var buff = _.reduce(['e', 'l', 'l', 'o'], function(memo, num) { 
+        console.log('memo = ' + memo + ', num = ' + num);
+        return memo + num; 
+      }, 'h');
+      console.log('buff = ' + buff);
+    });
+ 
+  //-->
+  </script>
+ </body>
+</html><style type="text/css">
+  
+</style>
