@@ -29,6 +29,16 @@
         return memo + num; 
       }, 'h');
       console.log('buff = ' + buff);
+      
+      // reduceRight는 list가 오른쪽부터 호출 됨.
+      var list = [[0, 1], [2, 3], [4, 5]];
+      var flat = _.reduceRight(list, function(memo, elem) { 
+        console.log('memo = ' + memo);
+        console.log('elem = ' + elem);
+        return memo.concat(elem); }, []);
+
+      //=> [4, 5, 2, 3, 0, 1]
+      console.log('flat = ' + flat);
     });
  
   //-->
