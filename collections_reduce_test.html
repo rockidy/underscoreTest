@@ -15,24 +15,24 @@
   <!--
     requirejs(['underscore'], function(_) {
       console.log('★★ underscore version = ' + _.VERSION);
-      
+
       console.log('※ reduce function...');
       // memo는 결과값 참조를 한다.
-      var sum = _.reduce([1, 2, 3], function(memo, num) { 
+      var sum = _.reduce([1, 2, 3], function(memo, num) {
         console.log('memo = ' + memo + ', num = ' + num);
-        return memo + num; 
+        return memo + num;
       }, 10);
       console.log('sum = ' + sum);
 
-      var buff = _.reduce(['e', 'l', 'l', 'o'], function(memo, num) { 
+      var buff = _.reduce(['e', 'l', 'l', 'o'], function(memo, num) {
         console.log('memo = ' + memo + ', num = ' + num);
-        return memo + num; 
+        return memo + num;
       }, 'h');
       console.log('buff = ' + buff);
-      
+
       // reduceRight는 list가 오른쪽부터 호출 됨.
       var list = [[0, 1], [2, 3], [4, 5]];
-      var flat = _.reduceRight(list, function(memo, elem) { 
+      var flat = _.reduceRight(list, function(memo, elem) {
         console.log('memo = ' + memo);
         console.log('elem = ' + elem);
         return memo.concat(elem); }, []);
@@ -40,10 +40,8 @@
       //=> [4, 5, 2, 3, 0, 1]
       console.log('flat = ' + flat);
     });
- 
+
   //-->
   </script>
  </body>
-</html><style type="text/css">
-  
-</style>
+</html>

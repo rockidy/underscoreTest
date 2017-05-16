@@ -18,26 +18,24 @@
 
       // _.each(list, iteratee, [context])
       console.log('※ map function...');
-      
-      console.log(_.map([1, 2, 3], function(element, idx, context) { 
+
+      console.log(_.map([1, 2, 3], function(element, idx, context) {
         console.log('index = ' + idx + ', element = ' + element + ', context = ' + context);
-        return element * 3; 
+        return element * 3;
       }));
-      
+
       console.log('{one: 1, two: 2, three: 3} --> map');
-      console.log(_.map({one: 1, two: 2, three: 3}, function(num, key) { 
+      console.log(_.map({one: 1, two: 2, three: 3}, function(num, key) {
         console.log('num = ' + num + ', key = ' + key);
-        return num * 3; 
+        return num * 3;
       }));
-      
+
       console.log('[[1, 2], [3, 4]] --> map');
       console.log(_.map([[1, 2], [3, 4]], _.first));
       console.log(_.map([[1, 2], [3, 4]], _.last));
     });
- 
+
   //-->
   </script>
  </body>
-</html><style type="text/css">
-  
-</style>
+</html>
