@@ -25,8 +25,9 @@
       });
       console.log('sum = ' + sum);
 
-      _.each({one: 1, two: 2, three: 3}, function(element, idx, context) {
-        console.log('index = ' + idx + ', element = ' + element + ', context = ' + JSON.stringify(context));
+      //_.each 와 forEach 동일함.
+      _.forEach({one: 1, two: 2, three: 3}, function(element, idx, context) {
+        console.log('forEach index = ' + idx + ', element = ' + element + ', context = ' + JSON.stringify(context));
       });
 
       // context는 iterator function에서 this로 참조되어진다.
@@ -50,9 +51,6 @@
         console.log(name + ' => ' + this[name]);
       }, person.friends);
     });
-
-
-
   //-->
   </script>
  </body>

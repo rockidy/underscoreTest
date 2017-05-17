@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="rockidy">
+  <meta name="Keywords" content="underscore">
+  <meta name="Description" content="">
+  <title>underscore.js test</title>
+  <script type="text/javascript" src="node_modules/requirejs/require.js"></script>
+  <script type="text/javascript" src="js/config.js"></script>
+ </head>
+ <body>
+  <script type="text/javascript">
+  <!--
+    requirejs(['underscore'], function(_) {
+      console.log('★★ underscore version = ' + _.VERSION);
+
+      // _.each(list, iteratee, [context])
+      console.log('※ map function...');
+
+      console.log(_.map([1, 2, 3], function(element, idx, context) {
+        console.log('index = ' + idx + ', element = ' + element + ', context = ' + context);
+        return element * 3;
+      }));
+
+      console.log('{one: 1, two: 2, three: 3} --> map');
+      console.log(_.map({one: 1, two: 2, three: 3}, function(num, key) {
+        console.log('num = ' + num + ', key = ' + key);
+        return num * 3;
+      }));
+
+      console.log('[[1, 2], [3, 4]] --> map');
+      console.log(_.map([[1, 2], [3, 4]], _.first));
+      console.log(_.map([[1, 2], [3, 4]], _.last));
+    });
+
+  //-->
+  </script>
+ </body>
+</html>
